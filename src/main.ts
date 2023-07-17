@@ -1,8 +1,5 @@
 import "./style.css";
 import axios from "axios";
-import typescriptLogo from "./typescript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.ts";
 
 const url = "https://jsonplaceholder.typicode.com/todos/1";
 
@@ -28,22 +25,21 @@ function logTodo(id: number, title: string, completed: boolean): void {
   Completed: ${completed}
   `);
 }
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`;
+// document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+// <header>
+// <h1>ToDo List</h1>
+// </header>
 
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+// <main>
+// <form autocomplete="off">
+//     <label>
+//         <input id="new-todo" name="todo" type="text" placeholder="new todo" />
+//     </label>
+//     <select id="user-todo" name="user">
+//         <option disabled selected>select user</option>
+//     </select>
+//     <button>Add Todo</button>
+// </form>
+// <ul id="todo-list"></ul>
+// </main>
+// `;
